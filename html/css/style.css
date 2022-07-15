@@ -1,0 +1,54 @@
+
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap');
+
+body{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+h1, h2, h3{
+    font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", sans-serif;
+    font-weight: bold;
+}
+
+p{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+h2{
+    border-bottom: 1px solid rgb(120, 152, 189);
+}
+
+ul li, ol li{
+    padding: 1em ;
+    font-size: 20px;
+    list-style-position: inside;
+    font-weight: bold;
+}
+
+ol.answers{
+    list-style: upper-alpha;
+}
+
+ol.answers li:hover{
+    border: 0.1em solid blue;
+    background-color: yellow;
+    padding: 0.9em;
+    cursor: pointer;
+}
+
+div#section-correct-answer{
+    display: none;
+}
+
+span#correct-answer{
+    font-weight: bold;
+}
+
+#main{
+    padding: 0 1.5em;
+}
+
+.section{
+    margin-top: 2em;
+}

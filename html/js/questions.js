@@ -1,25 +1,27 @@
-const answersList = document.querySelectorAll("ol.answers li");
+// 選択肢をクリックしたときの処理
 
+const answersList = document.querySelectorAll("ol.answers li");
 answersList.forEach(li => li.addEventListener("click", checkClickedAnswer));
 
 //  正しい答え
 const correctAnswers = {
-        question1: "B",
-        question2: "A",
-        question3: "B",
-        question4: "C",
+        1: "B",
+        2: "A",
+        3: "B",
+        4: "C",
 };
 
 function checkClickedAnswer(event) {
         // クリックされた答えの要素(liタグ)
         const clickedAnswerElement = event.currentTarget;
         console.log(clickedAnswerElement.dataset.answer);
+        
         // 選択した答え(A,B,C,D)
         const selectedAnswer = clickedAnswerElement.dataset.answer;
 
         const questionId = clickedAnswerElement.closest("ol.answers").dataset.id;
         // 正しい答え(A,B,C,D)
-        const correctAnswer= correctAnswers[questionId];
+        const correctAnswer = correctAnswers[questionId];
 
         // メッセージを入れる変数を用意
         let message;

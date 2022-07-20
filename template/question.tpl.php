@@ -6,27 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/questions.js" defer></script>
-    <title>問題1の | Quiz</title>
+    <title>問題<?php echo $id; ?>の | Quiz</title>
 </head>
 <body>
     <div id="main">
         <h1>Quiz!</h1>
         <div class="section">
-            <h2>問題1</h2>
+            <h2>問題<?php echo $id; ?></h2>
             <p><?php echo $question; ?></p>
             <h3>選択肢</h3>
-            <ol class="answers" data-id="question1">
-                <li data-answer="A">HyperTextMakingLanguage</li>
-                <li data-answer="B">HyperTextMarkupLanguage</li>
-                <li data-answer="C">HonmaniTensaitekinaMajidesugoiLanguage</li>
-                <li data-answer="D">そもそも略称ではない</li>
+            <ol class="answers" data-id="<?php echo $id; ?>">
+                <?php foreach($answers as $key => $value): ?>
+                <li data-answer="<?php echo $key; ?>"><?php echo $value; ?></li>
+                <?php endforeach; ?>
             </ol>
         </div> 
+        
         <div id="section-correct-answer" class="section">
             <h2>答え</h2>
-            <p><span id="correct-answer">B. HyperTextMarkupLanguage</span></p>
-            <p>これが間違えてたら「HTMLとは？」の動画を復習お願いします!</p>
+            <p><span id="correct-answer"><?php echo $correctAnswerValue; ?></span></p>
+            <p><?php echo $explanation; ?></p>
         </div>
+        
         <div class="section">
             <a href="index.html">戻る</a>
         </div>

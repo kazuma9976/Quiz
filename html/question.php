@@ -1,5 +1,18 @@
 <?php
-    $question = '任天堂の人気ゲームソフトの一つ「ゼルダの伝説」ですが、一番最初の作品が発売された日付はいつ？';
+    $id = '1';
+    $question = 'HTMLはなんの略';
     
+    $answers = [
+        'A' => 'HyperTextMakingLanguage',
+        'B' => 'HyperTextMarkupLanguage',
+        'C' => 'HonmaniTensaitekinaMajidesugoiLanguage',
+        'D' => 'そもそも略称ではない',
+    ];
+    
+    $correctAnswer = 'B';
+    $correctAnswerValue = $answers[$correctAnswer];
+    $explanation = 'これが間違えてたら「HTMLとは？」の動画を復習お願いします!';
+    
+
     include __DIR__.'/../template/question.tpl.php';
     
